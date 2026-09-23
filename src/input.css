@@ -1,0 +1,189 @@
+@import "tailwindcss";
+
+@layer components {
+
+    html {
+        @apply scroll-smooth
+    }
+
+    body {
+        @apply bg-slate-50 text-slate-800 leading-relaxed font-serif
+    }
+
+    h1, h2, h3, .logo, .badge, .nav-links a, .resume {
+        @apply font-sans;
+    }
+
+    .navbar-wrapper {
+        @apply fixed flex justify-center py-0 px-4 z-1000 top-5 inset-x-0
+    }
+
+    .navbar {
+        @apply bg-white/80 backdrop-blur-2xl border-white/60 border-solid rounded-full flex items-center justify-between w-full max-w-full py-2 px-6
+    }
+
+    .menu-toggle {
+        @apply hidden bg-none border-none cursor-pointer text-slate-500
+    }
+
+    .nav-actions {
+        @apply flex items-center gap-6
+    }
+
+    .nav-links {
+        @apply flex gap-5 hover:text-indigo-500
+    }
+
+    .nav-links a {
+        @apply text-slate-500 transition-colors duration-200 hover:text-indigo-500;
+    }
+
+    .resume {
+        @apply bg-indigo-500 text-white py-2 px-5 rounded-2xl hover:bg-indigo-600 hover:-translate-y-[3px] transition-all
+    }
+
+    hr {
+        @apply border-none border-t border-[#c7c4d8] opacity-30
+    }
+
+    a {
+        @apply decoration-0
+    }
+
+    .text-center {
+        @apply text-center
+    }
+
+    .main-container {
+        @apply max-w-6xl py-0 px-6 mx-auto
+    }
+
+    section {
+        @apply py-20 min-h-screen flex justify-center items-center flex-col border-b border-[#c7c4d8]/30
+    }
+
+    .landing {
+        @apply flex flex-row justify-between items-center gap-10 pt-20 min-h-screen
+    }
+
+    .hi {
+        @apply text-slate-900 mb-4 font-extrabold text-5xl leading-tight
+    }
+
+    .false {
+        @apply max-w-xl text-slate-500
+    }
+
+    .photo {
+        @apply rounded-3xl object-cover
+    }
+
+    .badge {
+        @apply inline-block text-xl mb-8 rounded-full text-indigo-500 bg-indigo-50 py-1.5 px-5
+    }
+
+    .stack-grid-se {
+        @apply grid grid-cols-3 w-full gap-8
+    }
+
+    .stack-grid-svcs {
+        @apply grid grid-cols-3 w-full gap-8
+    }
+
+    .stack-grid-prjcts {
+        @apply grid grid-cols-2 w-full gap-8
+    }
+
+    .stack-card {
+        @apply bg-white border border-slate-100 rounded-2xl py-8 px-6 transition-all hover:-translate-y-1
+    }
+
+    .card-icon {
+        @apply bg-indigo-50 text-indigo-500 flex items-center justify-center rounded-full w-14 h-14 mx-auto mb-4
+    }
+
+    .stack-card h3 {
+        @apply text-[#161c27] mb-2
+    }
+
+    .stack-card p {
+        @apply text-slate-500
+    }
+
+    .aaa {
+        @apply justify-center gap-2 flex flex-wrap mt-3
+    }
+
+    .aaa span {
+        @apply bg-indigo-50 text-indigo-500 text-sm font-semibold py-1 px-3.5 rounded-full
+    }
+
+    .project-card {
+        @apply bg-white rounded-3xl overflow-hidden border border-slate-100 text-center
+    }
+
+    .project-img img {
+        @apply w-full h-56 block object-cover
+    }
+
+    .project-body {
+        @apply p-6
+    }
+
+    .project-body .aaa {
+        @apply justify-center mb-3
+    }
+
+    .project-body h3 {
+        @apply mb-2 text-[1.3rem]
+    }
+
+    .project-body p {
+        @apply text-slate-500 text-[1rem] mb-4
+    }
+
+    .project-actions {
+        @apply flex gap-4 mt-4 justify-center
+    }
+
+    .case-study-btn {
+        @apply text-indigo-500 text-[1rem] font-semibold
+    }
+
+    .contact-desc {
+        @apply text-slate-500 max-w-[550px] mx-auto mb-6
+    }
+
+    .mail {
+        @apply inline-block bg-indigo-500 text-white py-3 px-7 rounded-full mb-6 font-semibold hover:bg-indigo-600 hover:-translate-y-[3px] transition-all
+    }
+
+    .social-links {
+        @apply flex justify-center gap-4
+    }
+
+    .social-links a {
+        @apply w-11 h-11 bg-indigo-50 text-indigo-500 rounded-full flex items-center justify-center text-[1.1rem] transition-all duration-200 hover:text-indigo-500 hover:-translate-y-0.5 hover:drop-shadow-[0_0_8px_#6366f1]
+    }
+
+    footer {
+        @apply text-center py-10 px-5 bg-white mt-14 border-t border-[#f1f5f1]
+    }
+
+    footer ul {
+        @apply list-none flex items-center justify-center p-5 gap-4 rounded-full text-[0.85rem] font-semibold
+    }
+
+    footer a {
+        @apply bg-indigo-50 text-indigo-500 py-1.5 px-4 rounded-full text-[0.85rem] font-semibold transition-colors;
+    }
+
+    .copyright {
+        @apply text-slate-500 text-[0.85rem]
+    }
+
+    .back-to-top {
+        @apply fixed bottom-6 right-6 py-2 px-4 rounded-full text-slate-500 text-sm font-semibold bg-white/90 border border-slate-100
+    }
+
+}
