@@ -14,6 +14,14 @@
         @apply font-sans;
     }
 
+    a {
+        @apply no-underline text-inherit
+    }
+
+    .menu-toggle {
+        @apply block md:hidden bg-transparent border-none cursor-pointer text-slate-500 text-xl
+    }
+
     .navbar-wrapper {
         @apply fixed flex justify-center py-0 px-4 z-1000 top-5 inset-x-0
     }
@@ -22,16 +30,16 @@
         @apply bg-white/80 backdrop-blur-2xl border-white/60 border-solid rounded-full flex items-center justify-between w-full max-w-full py-2 px-6
     }
 
-    .menu-toggle {
-        @apply hidden bg-none border-none cursor-pointer text-slate-500
-    }
-
     .nav-actions {
         @apply flex items-center gap-6
     }
 
     .nav-links {
-        @apply flex gap-5 hover:text-indigo-500
+        @apply hidden md:flex list-none flex-col md:flex-row absolute md:static top-16 left-0 right-0 bg-white/95 md:bg-transparent backdrop-blur-md md:backdrop-blur-none border border-[#c7c4d8] md:border-none rounded-2xl md:rounded-none p-5 md:p-0 gap-4 md:gap-5 md:shadow-none items-center
+    }
+
+    .nav-links.active {
+        @apply flex;
     }
 
     .nav-links a {
@@ -39,7 +47,7 @@
     }
 
     .resume {
-        @apply bg-indigo-500 text-white py-2 px-5 rounded-2xl hover:bg-indigo-600 hover:-translate-y-[3px] transition-all
+        @apply hidden md:inline-block bg-indigo-500 text-white py-2 px-5 rounded-full border-none transition-all duration-200 hover:bg-indigo-600 hover:-translate-y-[3px] cursor-pointer
     }
 
     hr {
@@ -59,11 +67,11 @@
     }
 
     section {
-        @apply py-20 min-h-screen flex justify-center items-center flex-col border-b border-[#c7c4d8]/30
+        @apply py-15 md:py-20 min-h-0 md:min-h-screen flex justify-center items-center flex-col border-b border-[#c7c4d8]/30
     }
 
     .landing {
-        @apply flex flex-row justify-between items-center gap-10 pt-20 min-h-screen
+        @apply flex flex-col-reverse md:flex-row justify-center md:justify-between items-center text-center md:text-left gap-10 pt-25 md:pt-20 min-h-0 md:min-h-[calc(100vh-80px)]
     }
 
     .hi {
@@ -74,8 +82,8 @@
         @apply max-w-xl text-slate-500
     }
 
-    .photo {
-        @apply rounded-3xl object-cover
+    .photo img {
+        @apply w-55 h-55 md:w-75 md:h-75 rounded-2xl object-cover transition-transform duration-300 hover:-translate-y-1
     }
 
     .badge {
@@ -83,15 +91,15 @@
     }
 
     .stack-grid-se {
-        @apply grid grid-cols-3 w-full gap-8
+        @apply grid grid-cols-1 md:grid-cols-3 w-full gap-6 md:gap-8
     }
 
     .stack-grid-svcs {
-        @apply grid grid-cols-3 w-full gap-8
+        @apply grid grid-cols-1 md:grid-cols-3 w-full gap-6 md:gap-8
     }
 
     .stack-grid-prjcts {
-        @apply grid grid-cols-2 w-full gap-8
+        @apply grid grid-cols-1 md:grid-cols-2 w-full gap-6 md:gap-8
     }
 
     .stack-card {
